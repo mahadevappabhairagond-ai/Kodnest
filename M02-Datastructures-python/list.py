@@ -1,4 +1,5 @@
 number = [1,2,3,4,5,3]
+print(number.count(3))
 print(number, type(number))
 print(len(number))
 print(number[3])
@@ -39,3 +40,19 @@ numbers= [1,2,3,4,5,3]
 numbers[5]=6
 numbers[1:4] = [20,30,40,50]
 print(numbers)
+
+a = [1,2,3]
+b = a.copy()
+print(b)
+print(b.index(3))
+print(b)
+
+x = [1, 3, 2, 6, 8, 30, 29]
+print(x.sort())
+print(x.reverse())
+
+list = [1, 3, 2]
+list.sort(reverse=True)
+print(list)
+list.sort(reverse=False)
+print(list)
