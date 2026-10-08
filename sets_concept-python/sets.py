@@ -35,4 +35,5 @@ for i in s3:
 
 fs = frozenset([1, 2, 3])
 print(fs, type(fs))
-#fs.add(6)
+#fs.add(6) # it will show error
+#fs.remove(1) # it will show error
