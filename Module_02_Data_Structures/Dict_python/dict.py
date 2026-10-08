@@ -43,3 +43,44 @@ my_dict = student.copy()
 print(my_dict)
 my_dict.update({'name': "Amit"})
 print(my_dict)
+
+student = {
+    "name": "Rahul",
+    "language": "java",
+    "marks": 88
+}
+for x in student:
+    print(f"{x} => {student[x]}")
+
+for x in student.items():
+    print(x)
+
+for x in student.keys():
+    print(x)
+
+for x in student.values():
+    print(x)
+
+# Nested Dictionary
+
+students = {
+    "stul": {
+        "name": "Rahul",
+        "age": 23,
+        "Tech": ["Python", "SQL"]
+    },
+    "stu2": {
+        "name": "Mahadev",
+        "age": 22,
+        "Tech": ["Java", "SQL", "Python"]
+    }
+    
+}
+
+print(students)
+print(students["stu2"]["name"])
+
+for x in students:
+    print(x)
+    for y in students[x]:
+        print(y, students[x][y])
