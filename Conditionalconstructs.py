@@ -1,19 +1,36 @@
-# If & else statement 
-# Write a python program to check whether a person is eligible to vote. if the age is 18 or above. print "Eligible to vote"
+# ============================================================
+# Conditional Constructs in Python
+# ============================================================
 
+# ------------------------------------------------------------
+# 1. If & Else Statement
+# Problem: Check whether a person is eligible to vote.
+# Condition: If age is 18 or above, print "Eligible to vote",
+#            otherwise print "Not eligible to vote".
+# ------------------------------------------------------------
+print("=== 1. Voting Eligibility Check ===")
 age = int(input("Enter your age: "))
+
 if age >= 18:
     print("Eligible to vote")
-
 else:
     print("Not eligible to vote")
-print("Thank You!")
 
-# if-elif-else statement
-# write a python program to check whether you are free tonight. if you are free. check whether your friends are
-# getting marks like a 90-A, 70-B, 50-C, 35-D, <35-F
+print("Thank You!\n")
 
+
+# ------------------------------------------------------------
+# 2. If-Elif-Else Statement (Grading System)
+# Problem: Assign grades based on student marks:
+#          marks >= 90       -> Grade A
+#          70 <= marks < 90  -> Grade B
+#          50 <= marks < 70  -> Grade C
+#          35 <= marks < 50  -> Grade D
+#          marks < 35        -> Fail
+# ------------------------------------------------------------
+print("=== 2. Student Grading System ===")
 marks = int(input("Enter your marks: "))
+
 if marks >= 90:
     print("Grade A")
 elif marks >= 70:
@@ -25,45 +42,77 @@ elif marks >= 35:
 else:
     print("Fail")
 
-# Nested if statement
-# print "Go out for party" if both are true: otherwise print the appropriate message.print
+print()
 
+
+# ------------------------------------------------------------
+# 3. Nested If Statement
+# Problem: Decide plan based on your availability and friends:
+#          - If free tonight:
+#              - If friends available: "Go out for party"
+#              - Else: "Sit and watch a movie at home"
+#          - Else: "Not available for party"
+# ------------------------------------------------------------
+print("=== 3. Nested Decision Making ===")
 free_tonight = True
 friends_available = True
-if(free_tonight):
-    if(friends_available):
+
+if free_tonight:
+    if friends_available:
         print("Go out for party")
     else:
-        print("seat and watch the movie at home")
+        print("Sit and watch a movie at home")
 else:
-    print("not available for party")
+    print("Not available for party")
+
+print()
 
 
-# match_case statement
-# Write a python program that accepts a number from 1 to 7 and uses match-case to print the corresponding day of the week
-
+# ------------------------------------------------------------
+# 4. Match-Case Statement (Python 3.10+)
+# Problem: Accept a number from 1 to 7 and print the corresponding
+#          day of the week (1 -> Monday, ..., 7 -> Sunday).
+# ------------------------------------------------------------
+print("=== 4. Day of the Week (Match-Case) ===")
 day = int(input("Enter a number between 1 to 7: "))
+
 match day:
-    case 1: print("Monday")
-    case 2: print("Tuesday")
-    case 3: print("Wednesday")
-    case 4: print("Thursday")
-    case 5: print("Friday")
-    case 6: print("Saturday")
-    case 7: print("Sunday")
-    case _: 
-        print("Invalid")
+    case 1:
+        print("Monday")
+    case 2:
+        print("Tuesday")
+    case 3:
+        print("Wednesday")
+    case 4:
+        print("Thursday")
+    case 5:
+        print("Friday")
+    case 6:
+        print("Saturday")
+    case 7:
+        print("Sunday")
+    case _:
+        print("Invalid day number")
 
-# match case with multiple casess
-# Write a python program that accepts a month number and uses match case to print the season: 3,4,5 -> summer, 6,7,8 -> Rainy, 9,10,11,12 -> winter
+print()
 
-month = int(input("Enter a month number: "))
+
+# ------------------------------------------------------------
+# 5. Match-Case with Multiple Patterns (using |)
+# Problem: Accept a month number (1-12) and print the season:
+#          3, 4, 5          -> Summer
+#          6, 7, 8          -> Rainy
+#          9, 10, 11, 12    -> Winter
+# ------------------------------------------------------------
+print("=== 5. Season Identifier (Match-Case Multiple Patterns) ===")
+month = int(input("Enter a month number (1 to 12): "))
+
 match month:
-    case 3 |4 | 5:
+    case 3 | 4 | 5:
         print("Summer")
     case 6 | 7 | 8:
         print("Rainy")
-    case 9 | 10 | 11:
+    case 9 | 10 | 11 | 12:
         print("Winter")
     case _:
-        print("Invalid")
+        print("Invalid month number")
